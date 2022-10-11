@@ -1,0 +1,100 @@
+<?php include("config/config.php"); ?>
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendário PHP</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="colors.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="<?php echo DIRPAGE.'lib/css/style.css'; ?>">
+
+    <link rel="stylesheet" href="<?php echo DIRPAGE.'lib/js/FullCalendar/main.min.css'; ?>">
+</head>
+
+
+<body>
+
+<header>
+      <nav class="navbar navbar-expand-lg navbar-primary">
+         <div class="container-fluid justify-content-center align-items-center">
+                <h1 class="text-light text-uppercase fs-4 fw-normal">Cadastro de Atividades Esportivas</h1>
+          </div>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="container mb-5">
+            <div class="form-group mt-5 mb-4">
+              <label for="eventFormControlInput1">Evento</label>
+              <input type="email" class="form-control" id="eventFormControlInput1">
+            </div>
+
+            <div class="form-group">
+              <label for="descriFormControlTextarea1">Descrição</label>
+              <textarea class="form-control" id="descriFormControlTextarea1" rows="3"></textarea>
+            </div>
+            
+            <div class="d-flex flex-row mt-5 mb-5 justify-content-between align-items-center">
+              <div class="form-group col-2">
+                <label for="eventFormControlInput1">Data</label>
+                <input type="date" class="form-control" id="eventFormControlInput1" placeholder="XX/XX/XXXX">
+              </div>
+
+              <div class="form-group col-2">
+                <label for="eventFormControlInput1">inicio:</label>
+                <input type="time" class="form-control" id="eventFormControlInput1" placeholder="XX/XX/XXXX">
+              </div>
+
+              <div class="form-group col-2">
+                <label for="eventFormControlInput1">Término:</label>
+                <input type="time" class="form-control" id="eventFormControlInput1" placeholder="XX/XX/XXXX">
+              </div>
+            </div>
+
+            <div class="row">          
+              <div class="col">
+                 <div class="p-3 border bg-light">
+                    <input class="form-check-input" type="radio" name="area" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">Repetir</label>
+                 </div>
+              </div>
+
+              <div class="col">
+                <div class="p-3 border bg-light">    
+                    <input class="form-check-input" type="radio" name="area" id="exampleRadios1" value="option2" checked>
+                    <label class="form-check-label" for="exampleRadios2">Não se repete</label>
+                </div>
+              </div>
+
+              <div class="row mt-5 range-slider">
+                    <label for="customRange3" class="form-label">Intervalo de semanas: 0</label>
+                    <input type="range" class="form-range" min="0" max="7" step="0.5" id="customRange3">
+              </div>
+            </div>  
+
+            <div class="d-flex flex-row mt-5 mb-5 justify-content-center align-items-center">
+              <button type="button" class="btn btn-outline-success col-4">Salvar</button>
+            </div>
+      </div>
+    </main>
+
+    <div class="calendar"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script src="<?php echo DIRPAGE.'lib/js/FullCalendar/main.min.js'; ?>"></script>
+    <script src="<?php echo DIRPAGE.'lib/js/javascript.js'; ?>"></script>
+
+
+</body>
+</html>

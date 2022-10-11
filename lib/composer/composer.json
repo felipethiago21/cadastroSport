@@ -1,0 +1,21 @@
+{
+    "name": "wef/calendar",
+    "description": "Calendário Agenda de Eventos com PHP.",
+    "autoload": {
+        "psr-4": {
+            "Wef\\Calendar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felipe Thiago"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Classes\\": "../../class",
+            "Models\\": "../../model"
+        }
+    }
+}
